@@ -41,7 +41,7 @@ while(std::getline(in_txt, line)){ //archiva todas las lineas del archivo
     file_lines += line;
     file_lines.push_back('\n');
 }
-if(metodo=="cesar"){  //comprueba si el metodo de encriptacion es cesar
+if(metodo=="1"){  //comprueba si el metodo de encriptacion es cesar
 newline = cripto_uncripto_cesar (file_lines,argv); //encripta o desencripta en cesar
 newline.pop_back();
 out_txt<<newline;
@@ -53,7 +53,7 @@ out_txt<<newline;
     }
 return 0;
 }
-if(metodo=="xor"){  //comprueba si el metodo de encriptacion es xor
+if(metodo=="2"){  //comprueba si el metodo de encriptacion es xor
 std::string pass = argv[4];
 newline = cripto_uncripto_XOR (file_lines,pass); //funcion que encripta o desencripta en xor
 newline.pop_back();
@@ -67,7 +67,7 @@ newline.pop_back();
     }
 return 0; 
 }
-if(metodo!="xor" && metodo!="cesar"){  //comprueba si el metodo de encriptacion no es ni cesar ni xor
+if(metodo!="1" && metodo!="2"){  //comprueba si el metodo de encriptacion no es ni cesar ni xor
 std::cout<<"Metodo de encriptacion incorrecto, por favor escriba "<<argv[0]<<" --help para más ayuda" <<std::endl;
 return 0;
 }
