@@ -11,5 +11,4 @@ const std::string texto_ayuda ="Este programa codifica y descodifica, de dos met
 
 std::string cripto_uncripto_XOR(std::string texto_a_codificar_xor,std::string pass); //define la funcion xor 
 
-
 #endif
